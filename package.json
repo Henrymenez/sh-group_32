@@ -1,0 +1,24 @@
+{
+  "name": "sh-group_32",
+  "version": "1.0.0",
+  "description": "side hustle group 32",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Henrymenez/sh-group_32.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Henrymenez/sh-group_32/issues"
+  },
+  "homepage": "https://github.com/Henrymenez/sh-group_32#readme",
+  "dependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
