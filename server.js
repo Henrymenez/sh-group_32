@@ -25,9 +25,12 @@ const server = http.createServer((req, res) => {
         const about = fs.readFileSync('pages/about.html')
         res.end(about)
     } else if (urlPath === '/sys') {
+        res.statusCode = 201;
+        res.setHeader('Content-Type', 'text/plain')
         fs.writeFileSync('./osinfo.json', osJSON, () => {
-            return;            
+            return;         
         })
+        res.end('Your OS has been saved Successfully');
     }
      else {
         res.statusCode = 404;
