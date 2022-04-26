@@ -7,8 +7,9 @@ const port = 5000
 const server = http.createServer((req, res) => {
     const urlPath = req.url
     if (urlPath === '/') {
-        res.writeHead(200, { 'Content-Type': 'text/plain' })
-        res.end('Home page')
+        res.writeHead(200, { 'Content-Type': 'text/html' })
+        const home = fs.readFileSync('pages/index.html')
+        res.end(home)
     } else if (urlPath === '/about') {
         res.writeHead(200, { 'Content-Type': 'text/html' })
         const about = fs.readFileSync('pages/about.html')
